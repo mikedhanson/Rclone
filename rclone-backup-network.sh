@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Edited: 5/3/2021
+
 BACKUP_NAME="Network"                   # Folder under UNRAID_PATH which will be backed up
 
 UNRAID_PATH=/mnt/user/backup            # Path to unraid which is the root backup 

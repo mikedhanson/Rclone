@@ -29,6 +29,17 @@ fi
 UNASSIGNEDDRIVE=/mnt/disks/Veeam2tb
 if [ -d "$UNASSIGNEDDRIVE" ] 
 then
+
+    # Calc size of BACKUP_PATH
+
+    # if BACKUP_PATH is less than UNASSIGNEDDRIVE 
+    # than 
+    
+
+    echo "$(date "+%d.%m.%Y %T") INFO: $UNASSIGNEDDRIVE present. Purging pre-existing backups"
+	rm -r $UNASSIGNEDDRIVE
+
+
     echo "$(date "+%d.%m.%Y %T") INFO: $UNASSIGNEDDRIVE present. Continuing with rclone"
     rclone sync $BACKUP_PATH $UNASSIGNEDDRIVE --log-level $LOG_LEVEL --log-file=$LOGFILE --progress #--dry-run
 else
